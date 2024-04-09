@@ -13,6 +13,7 @@ fun sensorEventListener(events: EventChannel.EventSink): SensorEventListener? {
 
         override fun onSensorChanged(event: SensorEvent) {
             val stepCount = event.values[0].toInt()
+            print("stepCount $stepCount")
             events.success(stepCount)
         }
     }
